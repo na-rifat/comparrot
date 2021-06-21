@@ -1,0 +1,22 @@
+{
+    "name": "lgx/comparrot",
+    "description": "Imports posts and pages from CSV file",
+    "type": "wordpress-plugin",
+    "license": "Commercial",
+    "authors": [
+        {
+            "name": "LGX",
+            "email": "inbound@comparrot.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Comparrot\\": "./includes/"
+        },
+        "files": [
+            "./includes/functions.php"
+        ]
+    }
+}
