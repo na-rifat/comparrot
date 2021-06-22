@@ -36,7 +36,7 @@ class Theme {
         add_filter( 'theme_page_templates', [$this, 'theme_templates'] );
         add_action( 'wp_head', [$this, 'hide_breadcrumb'] );
 
-        add_action( 'wp_head', [$this, 'render_breadcrumb_bg'] );
+        // add_action( 'wp_head', [$this, 'render_breadcrumb_bg'] );
 
         add_action( 'wp_head', [$this, 'load_meta'], 999 );
 
@@ -55,18 +55,18 @@ class Theme {
         echo $meta == false ? '' : $meta;
     }
 
-    public function render_breadcrumb_bg() {
-        echo sprintf(
-            '<style>
-            .compt-page-identity{ %s:url(%s) }
-            .compt-cta-background-image{%s:url(%s}
-            </style>',
-            'background-image',
-            COMPARROT_URL . '/assets/img/breadcrumb-bg.jpg',
-            'background-image',
-            COMPARROT_URL . '/assets/img/widget-bg.jpg'
-        );
-    }
+    // public function render_breadcrumb_bg() {
+    //     echo sprintf(
+    //         '<style>
+    //         .compt-page-identity{ %s:url(%s) }
+    //         .compt-cta-background-image{%s:url(%s}
+    //         </style>',
+    //         'background-image',
+    //         COMPARROT_URL . '/assets/img/breadcrumb-bg.jpg',
+    //         'background-image',
+    //         COMPARROT_URL . '/assets/img/widget-bg.jpg'
+    //     );
+    // }
 
     /**
      * Registers template options in edit page section

@@ -660,7 +660,7 @@ class Processor {
             }
         }
 
-        $template = preg_replace( '/<\[(.*?)\]/', '', $template );
+        $template = preg_replace( '/\[(.*?)\]/', '', $template );
         return $template;
     }
 

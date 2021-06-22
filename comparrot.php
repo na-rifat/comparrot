@@ -4,7 +4,7 @@
  * Plugin Name:       Comparrot
  * Plugin URI:        https://comparrot.nl
  * Description:       This plugin is used by the Comparrot theme.
- * Version:           1.0.5
+ * Version:           1.0.6
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            LGX

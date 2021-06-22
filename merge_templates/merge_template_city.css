@@ -1,126 +1,127 @@
-   /* Merge template 2 */
-   @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-   .mt2 {
-       background-color: #f7f7f7;
-   }
-   .breadcrumb {
-       background-color: #ffffff;
-   }
-   .breadcrumb > div {
-       padding: 10px;
-   }
-   .breadcrumb > div > *:not(:last-child)::after {
-       content: ">";
-       margin: 0 5px;
-   }
-   .mt2 section {
-       padding: 40px 0;
-   }
-   :root {
-       --font-raleway: "Raleway", sans-serif;
-   }
-   .map-frame {
-       width: 100%;
-       min-height: 300px;
-   }
-   
-   .mt2 h2 {
-       font-family: var(--font-raleway);
-       color: #1b75bb;
-       font-size: 22px;
-       font-weight: 800;
-   }
-   
-   .mt2 h3 {
-       font-family: var(--font-raleway);
-       color: #1b75bb;
-       font-size: 22px;
-       font-weight: 800;
-   }
-   .mt2 .address-items > div i:first-child {
-       color: #1b75bb;
-       font-size: 30px;
-       margin-right: 15px;
-   }
-   
-   .mt2 .address-items > div {
-       margin: 25px 0;
-       font-size: 16px;
-   }
-   
-   .mt2 .address-items .fa-star {
-       color: #f0ad4e;
-   }
-   .mt2 .green-button {
-       display: inline-block;
-       line-height: 1;
-       background-color: #818a91;
-       font-size: 15px;
-       padding: 12px 24px;
-       -webkit-border-radius: 3px;
-       border-radius: 3px;
-       color: #fff;
-       fill: #fff;
-       text-align: center;
-       -webkit-transition: all 0.3s;
-       -o-transition: all 0.3s;
-       transition: all 0.3s;
-       font-size: 20px;
-       text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
-       background-color: #38da35;
-       text-decoration: none;
-   }
-   .mt2 .blue-button {
-       display: inline-block;
-       line-height: 1;
-       background-color: #818a91;
-       font-size: 15px;
-       padding: 12px 24px;
-       -webkit-border-radius: 3px;
-       border-radius: 3px;
-       color: #fff;
-       fill: #fff;
-       text-align: center;
-       -webkit-transition: all 0.3s;
-       -o-transition: all 0.3s;
-       transition: all 0.3s;
-       font-size: 20px;
-       text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
-       background-color: #1b75bb;
-       text-decoration: none;
-   }
-   .mt2-card-col > div {
-       background-color: #ffffff;
-       padding: 25px;
-       margin: 10px;
-       width: calc(33.3333333333% - 20px);
-   }
-   
-   .mt2 table.info tr td:first-child {
-       color: #aaa;
-   }
-   .mt2 table.info {
-       font-size: 0.9em;
-       border-collapse: collapse;
-       border: none;
-   }
-   .mt2 .address-col {
-       padding-left: 15px;
-   }
-   .mt2 table.info td {
-       border: none;
-       padding: 5px 10px;
-   }
-   
-   .mt2 table.info tr {
-       border: 1px solid #ccc;
-   }
-   .mt2 .para-section {
-       background-color: #fff;
-   }
-   
+/* Merge template 2 */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.mt2 {
+    background-color: #f7f7f7;
+}
+.breadcrumb {
+    background-color: #ffffff;
+}
+.breadcrumb > div {
+    padding: 10px;
+}
+.breadcrumb > div > *:not(:last-child)::after {
+    content: ">";
+    margin: 0 5px;
+}
+.mt2 section {
+    padding: 40px 0;
+}
+:root {
+    --font-raleway: "Raleway", sans-serif;
+}
+.map-frame {
+    width: 100%;
+    min-height: 300px;
+}
 
-   
+.mt2 h2 {
+    font-family: var(--font-raleway);
+    color: #1b75bb;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.mt2 h3 {
+    font-family: var(--font-raleway);
+    color: #1b75bb;
+    font-size: 22px;
+    font-weight: 800;
+}
+.mt2 .address-items > div i:first-child {
+    color: #1b75bb;
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.mt2 .address-items > div {
+    margin: 25px 0;
+    font-size: 16px;
+}
+
+.mt2 .address-items .fa-star {
+    color: #f0ad4e;
+}
+.mt2 .green-button {
+    display: inline-block;
+    line-height: 1;
+    background-color: #818a91;
+    font-size: 15px;
+    padding: 12px 24px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    fill: #fff;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 20px;
+    text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+    background-color: #38da35;
+    text-decoration: none;
+}
+.mt2 .blue-button {
+    display: inline-block;
+    line-height: 1;
+    background-color: #818a91;
+    font-size: 15px;
+    padding: 12px 24px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    fill: #fff;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 20px;
+    text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+    background-color: #1b75bb;
+    text-decoration: none;
+}
+.mt2-card-col > div {
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 10px;
+    width: calc(33.3333333333% - 20px);
+}
+
+.mt2 table.info tr td:first-child {
+    color: #aaa;
+}
+.mt2 table.info {
+    font-size: 0.9em;
+    border-collapse: collapse;
+    border: none;
+}
+.mt2 .address-col {
+    padding-left: 15px;
+}
+.mt2 table.info td {
+    border: none;
+    padding: 5px 10px;
+}
+
+.mt2 table.info tr {
+    border: 1px solid #ccc;
+}
+.mt2 .para-section {
+    background-color: #fff;
+}
+
+
+
+
 .mt2-container,
 .mt2-container-fluid,
 .mt2-container-xxl,

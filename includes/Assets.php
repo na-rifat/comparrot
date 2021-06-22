@@ -149,7 +149,7 @@ class Assets {
             wp_enqueue_script( 'cmp-owl-carousel' );
             wp_enqueue_style( 'comparrot-toc-style' );
             wp_enqueue_style( 'comparrot-frontend-style' );
-            wp_enqueue_style( 'comparrot-self-strap' );
+            // wp_enqueue_style( 'comparrot-self-strap' );
             wp_enqueue_style( 'cmp-owl-carousel' );
             wp_enqueue_style( 'cmp-owl-theme' );
         }
@@ -158,7 +158,7 @@ class Assets {
             wp_enqueue_style( 'comparrot-fontawesome' );
             wp_enqueue_script( 'comparrot-frontend-script' );
             wp_enqueue_style( 'comparrot-frontend-style' );
-            wp_enqueue_style( 'comparrot-self-strap' );
+            // wp_enqueue_style( 'comparrot-self-strap' );
         }
     }
 }
