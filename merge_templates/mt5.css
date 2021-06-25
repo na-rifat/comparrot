@@ -665,7 +665,8 @@
     padding: 20px;
 }
 .acr-content {
-    background-color: var(--light-green-fill);
+    background-color: #f4f4f4;
+    font-size: 14px;
 }
 .mt4-acr .is-active-link::before {
     display: none;
@@ -2264,7 +2265,7 @@ footer .footer-section {
 /* Footer banner end */
 
 /* Sidebar 3 */
-.sidebar-row:nth-child(2) {
+.sc3 .sidebar-row:nth-child(1) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column;
@@ -2272,12 +2273,12 @@ footer .footer-section {
     padding: 0;
     overflow: hidden;
 }
-.sidebar-row:nth-child(2) > * {
+.sc3 .sidebar-row:nth-child(1) > * {
     padding: 20px;
 }
-.sidebar-row:nth-child(2) .list-header {
+.sc3 .sidebar-row:nth-child(1) .list-header {
     background-color: white;
-    padding: 20px 40px;
+    padding: 15px 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2292,7 +2293,7 @@ footer .footer-section {
     background-color: var(--light-green-fill);
 }
 
-.sidebar-row:nth-child(2) .list {
+.sc3 .sidebar-row:nth-child(1) .list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2302,7 +2303,7 @@ footer .footer-section {
     padding: 10px 20px;
     margin: 0 30px;
 }
-.sidebar-row:nth-child(2) .list:not(:last-child) {
+.sc3 .sidebar-row:nth-child(1) .list:not(:last-child) {
     border-bottom: 2px solid var(--green-fill);
 }
 /* Sidebar 3 end */
@@ -2311,6 +2312,7 @@ footer .footer-section {
 .adrs-title,
 .adres-title {
     color: var(--dark-green-fill);
+    font-size: 18px;
 }
 .peoples-holder {
     display: -webkit-box;
@@ -2438,3 +2440,35 @@ section.mt4-section {
     margin-right: 0;
 }
 /* Section 4 end */
+
+blockquote {
+    background-color: var(--light-green-fill);
+    border-left: 4px solid var(--dark-green-fill);
+    margin: 0;
+}
+.section-row:nth-child(1) {
+    justify-content: flex-start;
+    font-size: 0.9em;
+    padding: 30px;
+}
+.sidebar-row:nth-child(1) {
+    font-size: 0.9em;
+}
+
+.sidebar-row:first-child .mt4-input-group {
+    padding: 2px;
+}
+.sidebar-row:first-child .mt4-input-group input {
+    margin: 0 2px;
+}
+.sc2-item h2 {
+    color: var(--dark-green-fill);
+    font-weight: bold;
+}
+.list-title {
+    font-weight: 500;
+}
+
+.menu ul:first-child ul {
+    display: none;
+}

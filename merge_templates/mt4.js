@@ -186,6 +186,7 @@ function getRotationDegrees(obj) {
             $(`#${currentId}`).css({
                 "background-color": `white`,
                 "z-index": 10,
+                fontWeight: `bold`
             });
 
             tabs.parent().find(`[data-id=${currentId}]`).css({
@@ -197,6 +198,7 @@ function getRotationDegrees(obj) {
             keys.eq(2).css({
                 "background-color": `white`,
                 "z-index": 10,
+                fontWeight: `bold`
             });
 
             tabs.eq(2).css({
