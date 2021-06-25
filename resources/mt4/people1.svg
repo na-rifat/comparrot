@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82">
+  <g id="Rectangle_124" data-name="Rectangle 124" fill="#fff" stroke="#bffd6a" stroke-width="2">
+    <rect width="82" height="82" rx="10" stroke="none"/>
+    <rect x="1" y="1" width="80" height="80" rx="9" fill="none"/>
+  </g>
+  <path id="male-solid" d="M7.288,0A4.859,4.859,0,1,1,2.429,4.859,4.859,4.859,0,0,1,7.288,0m3.644,10.932H10.07a6.672,6.672,0,0,1-5.563,0H3.644A3.644,3.644,0,0,0,0,14.576V24.9a1.822,1.822,0,0,0,1.822,1.822H3.037V37.049a1.822,1.822,0,0,0,1.822,1.822H9.718a1.822,1.822,0,0,0,1.822-1.822V26.724h1.215A1.822,1.822,0,0,0,14.576,24.9V14.576A3.644,3.644,0,0,0,10.932,10.932Z" transform="translate(32.5 21)" fill="#2c2c2c"/>
+</svg>

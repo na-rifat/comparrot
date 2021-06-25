@@ -1,6 +1,6 @@
 (function ($) {
     $(document).ready(function (e) {
-        mt3Toc();
+        mt3acr();
 
         $(".bi-col:nth-child(2)").owlCarousel({
             loop: true,
@@ -35,12 +35,13 @@
         // }, 1500);
         // owl.buildControls();
 
-        $(`.toc-key`).on(`click`, function (e) {
+        $(`.acr-key`).on(`click`, function (e) {
             e.preventDefault();
 
-            let img = $(this).find(`.toc-col:last-child img`);
+            let img = $(this).find(`.acr-col:last-child img`);
+            let parent = $(this).parent();
             let currrentDeg = getRotationDegrees(img);
-            let content = $(`.toc-content`);
+            let content = parent.find(`.acr-content`);
 
             if (currrentDeg == 0) {
                 img.css({
@@ -53,9 +54,9 @@
                 });
                 content.slideDown(300);
             }
-        });
+        }).trigger(`click`);
 
-        $(`ul.ordered li`).each(function (e) {
+        $(`.list-items .list`).each(function (e) {
             let ind = $(this).index() + 1;
             $(this).prepend(`<div class="ordered-li-indicator">${ind}</div>`);
         });
@@ -66,47 +67,47 @@
     });
 })(jQuery);
 
-function mt3Toc() {
-    let $ = jQuery;
-    if ($(`.mt3-toc`).length == 0) {
-        return;
-    }
-
-    let ids = [];
-
-    // $(`.page-content-section h1`).hide();
-    // return;
-
-    let selectors = $(
-        `.page-content-section h1, 
-        .page-content-section h2, 
-        .page-content-section h3,
-        .page-content-section h4`
-    );
-
-    // for(let i = 0; i < selectors.length; i++){
-    //     let item = selectors.eq(i);
-    //     let id = createID(item, ids);
-    //     ids.push(id);
-    //     item.attr(`id`, id);
+function mt3acr() {
+    // let $ = jQuery;
+    // if ($(`.mt3-acr`).length == 0) {
+    //     return;
     // }
-    selectors.each(function () {
-        let id = createID($(this), ids);
-        ids.push(id);
-        $(this).attr(`id`, id);
-    });
 
-    tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: ".toc-content",
-        // Where to grab the headings to build the table of contents.
-        contentSelector: ".page-content-section",
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: "h1, h2, h3, h4",
-        // For headings inside relative or absolute positioned containers within content.
-        hasInnerContainers: true,
-    });
-    tocbot.refresh();
+    // let ids = [];
+
+    // // $(`.page-content-section h1`).hide();
+    // // return;
+
+    // let selectors = $(
+    //     `.page-content-section h1, 
+    //     .page-content-section h2, 
+    //     .page-content-section h3,
+    //     .page-content-section h4`
+    // );
+
+    // // for(let i = 0; i < selectors.length; i++){
+    // //     let item = selectors.eq(i);
+    // //     let id = createID(item, ids);
+    // //     ids.push(id);
+    // //     item.attr(`id`, id);
+    // // }
+    // selectors.each(function () {
+    //     let id = createID($(this), ids);
+    //     ids.push(id);
+    //     $(this).attr(`id`, id);
+    // });
+
+    // acrbot.init({
+    //     // Where to render the table of contents.
+    //     acrSelector: ".acr-content",
+    //     // Where to grab the headings to build the table of contents.
+    //     contentSelector: ".page-content-section",
+    //     // Which headings to grab inside of the contentSelector element.
+    //     headingSelector: "h1, h2, h3, h4",
+    //     // For headings inside relative or absolute positioned containers within content.
+    //     hasInnerContainers: true,
+    // });
+    // acrbot.refresh();
 }
 
 function createID(el, ids) {
@@ -144,4 +145,3 @@ function getRotationDegrees(obj) {
     }
     return angle < 0 ? angle + 360 : angle;
 }
-

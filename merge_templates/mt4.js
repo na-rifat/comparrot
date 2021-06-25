@@ -55,7 +55,7 @@
             }
         });
 
-        $(`ul.ordered li`).each(function (e) {
+        $(`.list-items .list`).each(function (e) {
             let ind = $(this).index() + 1;
             $(this).prepend(`<div class="ordered-li-indicator">${ind}</div>`);
         });
@@ -145,3 +145,75 @@ function getRotationDegrees(obj) {
     return angle < 0 ? angle + 360 : angle;
 }
 
+(function ($) {
+    $(document).ready(() => {
+        let keys = $(`.mt4-tab-keys .key-item`);
+        let tabs = $(`.mt4-tab-contents .content-item`);
+
+        tabs.css({
+            "z-index": 0,
+            display: `none`
+        });
+        keys.css({
+            "z-index": 0,
+        });
+
+        keys.each(function () {
+            $(this).attr(
+                `id`,
+                $(this).text().toLowerCase().replace(` `, `-`) +
+                    `-` +
+                    $(this).index()
+            );
+
+            $(this).attr(
+                `href`,
+                `#` +
+                    $(this).text().toLowerCase().replace(` `, `-`) +
+                    `-` +
+                    $(this).index()
+            );
+
+            tabs.eq($(this).index()).attr(`data-id`, $(this).attr(`id`));
+        });
+
+        let currentId = window.location.href.split(`#`);
+        currentId =
+            currentId.length > 1 ? currentId[currentId.length - 1] : false;
+
+            console.log(currentId)
+        if (currentId !== false) {
+            $(`#${currentId}`).css({
+                "background-color": `white`,
+                "z-index": 10,
+            });
+
+            tabs.parent().find(`[data-id=${currentId}]`).css({
+                "z-index": 10,
+                display: `block`
+            });
+            scrlToTab();
+        } else {
+            keys.eq(2).css({
+                "background-color": `white`,
+                "z-index": 10,
+            });
+
+            tabs.eq(2).css({
+                "z-index": 10,
+                display: `block`
+            });
+        }
+    });
+})(jQuery);
+
+function scrlToTab(el = `.mt4-tab`) {
+    let $ = jQuery;
+
+    $([document.documentElement, document.body]).animate(
+        {
+            scrollTop: $(el).offset().top - 100,
+        },
+        2000
+    );
+}
