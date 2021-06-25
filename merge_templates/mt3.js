@@ -28,7 +28,14 @@
                 },
             },
         });
-        // var owl = $(".bi-col:nth-child(2)").data("owlCarousel");
+        var owl = $(".bi-col:nth-child(2)").data("owlCarousel");
+
+        $(`.bi-col:nth-child(1) img`).on(`click`, function (e) {
+            owl.prev();
+        });
+        $(`.bi-col:nth-child(3) img`).on(`click`, function (e) {
+            owl.next();
+        });
 
         // setInterval(() => {
         //     owl.next();
@@ -78,10 +85,10 @@ function mt3Toc() {
     // return;
 
     let selectors = $(
-        `.page-content-section h1, 
-        .page-content-section h2, 
-        .page-content-section h3,
-        .page-content-section h4`
+        `.page-content-section > h1, 
+        .page-content-section > h2, 
+        .page-content-section > h3,
+        .page-content-section > h4`
     );
 
     // for(let i = 0; i < selectors.length; i++){
@@ -144,4 +151,3 @@ function getRotationDegrees(obj) {
     }
     return angle < 0 ? angle + 360 : angle;
 }
-

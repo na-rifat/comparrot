@@ -28,12 +28,19 @@
                 },
             },
         });
-        // var owl = $(".bi-col:nth-child(2)").data("owlCarousel");
+        var owl = $(".bi-col:nth-child(2)").data("owlCarousel");
 
         // setInterval(() => {
         //     owl.next();
         // }, 1500);
         // owl.buildControls();
+
+        $(`.bi-col:nth-child(1) img`).on(`click`, function (e) {
+            owl.prev();
+        });
+        $(`.bi-col:nth-child(3) img`).on(`click`, function (e) {
+            owl.next();
+        });
 
         $(`.toc-key`).on(`click`, function (e) {
             e.preventDefault();
@@ -152,7 +159,7 @@ function getRotationDegrees(obj) {
 
         tabs.css({
             "z-index": 0,
-            display: `none`
+            display: `none`,
         });
         keys.css({
             "z-index": 0,
@@ -181,29 +188,29 @@ function getRotationDegrees(obj) {
         currentId =
             currentId.length > 1 ? currentId[currentId.length - 1] : false;
 
-            console.log(currentId)
+        console.log(currentId);
         if (currentId !== false) {
             $(`#${currentId}`).css({
                 "background-color": `white`,
                 "z-index": 10,
-                fontWeight: `bold`
+                fontWeight: `bold`,
             });
 
             tabs.parent().find(`[data-id=${currentId}]`).css({
                 "z-index": 10,
-                display: `block`
+                display: `block`,
             });
             scrlToTab();
         } else {
             keys.eq(2).css({
                 "background-color": `white`,
                 "z-index": 10,
-                fontWeight: `bold`
+                fontWeight: `bold`,
             });
 
             tabs.eq(2).css({
                 "z-index": 10,
-                display: `block`
+                display: `block`,
             });
         }
     });
@@ -216,6 +223,6 @@ function scrlToTab(el = `.mt4-tab`) {
         {
             scrollTop: $(el).offset().top - 100,
         },
-        2000
+        0
     );
 }
