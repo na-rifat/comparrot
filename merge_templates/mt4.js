@@ -167,7 +167,7 @@ function getRotationDegrees(obj) {
 
         keys.each(function () {
             $(this).attr(
-                `id`,
+                `data-id`,
                 $(this).text().toLowerCase().replace(` `, `-`) +
                     `-` +
                     $(this).index()
@@ -175,28 +175,33 @@ function getRotationDegrees(obj) {
 
             $(this).attr(
                 `href`,
-                `#` +
-                    $(this).text().toLowerCase().replace(` `, `-`) +
+                $(this).text().toLowerCase().replace(` `, `-`) +
                     `-` +
                     $(this).index()
             );
 
-            tabs.eq($(this).index()).attr(`data-id`, $(this).attr(`id`));
+            tabs.eq($(this).index()).attr(`data-id`, $(this).attr(`href`));
         });
 
-        let currentId = window.location.href.split(`#`);
-        currentId =
-            currentId.length > 1 ? currentId[currentId.length - 1] : false;
+        keys.on(`click`, function (e) {
+            e.preventDefault();
+            let url =
+                comparrot.current_page_slug + "?tab=" + $(this).attr(`href`);
+            window.open(url, `_self`);
+        });
 
-        console.log(currentId);
-        if (currentId !== false) {
-            $(`#${currentId}`).css({
+        let currentId = window.location.href.split(`?tab=`);
+
+        currentId = currentId[currentId.length - 1];
+
+        if (currentId.length == 1) {
+            $(`a[data-id="${currentId}"]`).css({
                 "background-color": `white`,
                 "z-index": 10,
                 fontWeight: `bold`,
             });
 
-            tabs.parent().find(`[data-id=${currentId}]`).css({
+            tabs.parent().find(`div[data-id=${currentId}]`).css({
                 "z-index": 10,
                 display: `block`,
             });

@@ -76,6 +76,7 @@ class Assets {
      */
     public function get_localize() {
         global $post;
+        global $wp;
         return [
             'comparrot-admin-script'    => [
                 'ajax_url'                      => admin_url( 'admin-ajax.php' ),
@@ -89,8 +90,10 @@ class Assets {
                 'regenerate_pages_nonce'        => wp_create_nonce( 'regenerate_pages' ),
             ],
             'comparrot-frontend-script' => [
-                'rcs'      => CMP_RESOURCE_URL,
-                'site_url' => site_url(),
+                'rcs'          => CMP_RESOURCE_URL,
+                'site_url'     => site_url(),
+                'current_slug' => $wp->request,
+                'current_page_slug'=>$post->guid
             ],
         ];
     }
@@ -149,7 +152,7 @@ class Assets {
             wp_enqueue_script( 'cmp-owl-carousel' );
             wp_enqueue_style( 'comparrot-toc-style' );
             wp_enqueue_style( 'comparrot-frontend-style' );
-            // wp_enqueue_style( 'comparrot-self-strap' );
+            wp_enqueue_style( 'comparrot-self-strap' );
             wp_enqueue_style( 'cmp-owl-carousel' );
             wp_enqueue_style( 'cmp-owl-theme' );
         }

@@ -1,39 +1,5 @@
 (function ($) {
     $(document).ready(function (e) {
-        mt3acr();
-
-        $(".bi-col:nth-child(2)").owlCarousel({
-            loop: true,
-            items: 2,
-            margin: 10,
-            nav: true,
-            responsiveClass: false,
-            //Autoplay
-            autoPlay: 2000,
-            stopOnHover: true,
-
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: true,
-                },
-                600: {
-                    items: 2,
-                    nav: false,
-                },
-                1000: {
-                    items: 3,
-                    nav: true,
-                    loop: false,
-                },
-            },
-        });
-        // var owl = $(".bi-col:nth-child(2)").data("owlCarousel");
-
-        // setInterval(() => {
-        //     owl.next();
-        // }, 1500);
-        // owl.buildControls();
 
         $(`.acr-key`).on(`click`, function (e) {
             e.preventDefault();
@@ -67,48 +33,7 @@
     });
 })(jQuery);
 
-function mt3acr() {
-    // let $ = jQuery;
-    // if ($(`.mt3-acr`).length == 0) {
-    //     return;
-    // }
 
-    // let ids = [];
-
-    // // $(`.page-content-section h1`).hide();
-    // // return;
-
-    // let selectors = $(
-    //     `.page-content-section h1, 
-    //     .page-content-section h2, 
-    //     .page-content-section h3,
-    //     .page-content-section h4`
-    // );
-
-    // // for(let i = 0; i < selectors.length; i++){
-    // //     let item = selectors.eq(i);
-    // //     let id = createID(item, ids);
-    // //     ids.push(id);
-    // //     item.attr(`id`, id);
-    // // }
-    // selectors.each(function () {
-    //     let id = createID($(this), ids);
-    //     ids.push(id);
-    //     $(this).attr(`id`, id);
-    // });
-
-    // acrbot.init({
-    //     // Where to render the table of contents.
-    //     acrSelector: ".acr-content",
-    //     // Where to grab the headings to build the table of contents.
-    //     contentSelector: ".page-content-section",
-    //     // Which headings to grab inside of the contentSelector element.
-    //     headingSelector: "h1, h2, h3, h4",
-    //     // For headings inside relative or absolute positioned containers within content.
-    //     hasInnerContainers: true,
-    // });
-    // acrbot.refresh();
-}
 
 function createID(el, ids) {
     let $ = jQuery;
