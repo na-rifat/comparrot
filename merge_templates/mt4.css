@@ -528,37 +528,10 @@
     display: flex;
 }
 .rating-section .rating-star-holder img {
-    height: 15px;
+    height: 10px;
     width: auto;
 }
-/* .rating-row {
-    flex-wrap: nowrap;
-    margin: 5px 0;
-    justify-content: flex-start !important;
-    padding: 0;
-}
-.rating-row > * {
-    border-radius: 20px;
-    margin: 2px;
-}
-.rating-row .rating-ico {
-    display: inline-flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin: 5px;
-    border: 1px solid var(--green-fill);
-    background-color: var(--light-green-fill);
-    border-radius: 20px;
-}
-.rating-row .rating-star-holder {
-    display: flex;
-}
-.rating-row .rating-star-holder img {
-    height: 15px;
-    width: auto;
-} */
+
 .white-rating-holder img {
     height: 30px;
     width: auto;

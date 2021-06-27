@@ -192,9 +192,10 @@ function getRotationDegrees(obj) {
 
         let currentId = window.location.href.split(`?tab=`);
 
-        currentId = currentId[currentId.length - 1];
-
-        if (currentId.length == 1) {
+        currentId =
+            currentId.length > 1 ? currentId[currentId.length - 1] : false;
+        if (currentId.length != false) {
+            
             $(`a[data-id="${currentId}"]`).css({
                 "background-color": `white`,
                 "z-index": 10,
