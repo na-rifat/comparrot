@@ -194,8 +194,8 @@ function getRotationDegrees(obj) {
 
         currentId =
             currentId.length > 1 ? currentId[currentId.length - 1] : false;
-        if (currentId.length != false) {
-            
+
+        if (currentId !== false) {
             $(`a[data-id="${currentId}"]`).css({
                 "background-color": `white`,
                 "z-index": 10,
